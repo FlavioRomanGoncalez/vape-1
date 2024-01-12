@@ -47,7 +47,7 @@
 
 @keyframes nav_lists {
   to {
-    width: 740px;
+    width: 560px;
     overflow: auto;
     border-bottom: 1px solid #3b3b3b;
     /* transform: translateY(0px); */

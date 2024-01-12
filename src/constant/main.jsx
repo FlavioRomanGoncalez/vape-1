@@ -17,7 +17,7 @@ export const NAV_OPTIONS = [
   { id: 3, href: "#products", text: "PRODUCTS", url: "" },
   { id: 4, href: "#testimonials", text: "TESTIMONIALS", url: "" },
   { id: 5, href: "#dealers", text: "DEALERS", url: "" },
-  { id: 6, href: "#authentication", text: "AUTHENTICATION", url: "" },
+  // { id: 5, href: "#authentication", text: "AUTHENTICATION", url: "" },
 ];
 
 export const PRODUCTS = [

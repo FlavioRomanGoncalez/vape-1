@@ -2,17 +2,6 @@
   min-height: calc(100vh);
 }
 
-.image {
-  width: 80px;
-  height: 80px;
-  object-fit: cover;
-  transition: all 0.2s ease;
-  margin-right: 20px;
-  border-radius: 20px;
-  border-radius: 100%;
-  border: 3px solid #ddd;
-}
-
 .title {
   width: 100%;
   font-size: 3rem;
@@ -23,7 +12,7 @@
 .container_slide {
   height: 100vh;
   display: flex;
-  padding: 0 40px;
+  padding: 0 200px;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
@@ -31,57 +20,58 @@
 }
 
 .slide {
-  width: 450px;
-  height: 300px;
+  width: 100%;
+  height: 80%;
   display: flex;
-  padding: 0 20px;
   position: relative;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
   transition: all 0.2s ease;
-  border: 1px solid #ddd;
-  box-shadow: 2.1px 3.1px 2.7px rgba(0, 0, 0, 0.022),
-    5.2px 7.9px 6.9px rgba(0, 0, 0, 0.031),
-    10.6px 16.1px 14.2px rgba(0, 0, 0, 0.039),
-    21.9px 33.2px 29.2px rgba(0, 0, 0, 0.049),
-    60px 91px 80px rgba(0, 0, 0, 0.07);
+  align-items: center;
+  border-radius: 20px;
+  justify-content: space-between;
 }
 
-.slide:hover {
-  transform: translateY(-20px);
+.name {
+  font-size: 3rem;
+  text-align: left;
+  font-weight: 500;
 }
 
-.subtitle {
-  color: #000;
-  font-size: 1.7rem;
-  text-align: center;
+.content {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  padding: 50px;
+  object-fit: cover;
+  border-radius: 20px;
+  filter: drop-shadow(20px 20px 0px #dddddd);
+  transition: all 0.2s ease;
 }
 
 .desc {
   width: 100%;
   color: #000;
+  margin: auto;
+  padding: 0 20px;
   max-width: 600px;
   font-size: 1.2rem;
-  font-weight: 400;
-  text-align: justify;
-  margin-left: 0px;
-  letter-spacing: 2px;
+  text-align: center;
   transition: all 0.2s ease;
-  position: absolute;
-  padding: 0 20px;
-  top: 50px;
+  font-weight: 400;
+  letter-spacing: 2px;
 }
 
-.test {
-  display: flex;
-  align-items: center;
-  position: absolute;
-  bottom: 30px;
-  left: 30px;
-}
-
-.test_text {
-  font-size: 1.2rem;
-  font-weight: 500;
+@media (max-width: 1280px) {
+  .container_slide {
+    padding: 0px;
+  }
+  .slide {
+    flex-direction: column;
+  }
 }

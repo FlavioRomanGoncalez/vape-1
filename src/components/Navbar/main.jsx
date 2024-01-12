@@ -21,8 +21,6 @@ export default function Navbar() {
       <nav
         className={`${styles.container_nav}`}
         style={{
-          // opacity: `${show ? "0" : "1"}`,
-
           backgroundColor: `${change ? "#25252550" : "transparent"}`,
         }}
       >
@@ -37,9 +35,6 @@ export default function Navbar() {
           style={{
             top: `${show ? "0%" : "-200%"}`,
             transition: "all 1s ease",
-            borderBottom: `${
-              change ? "1px solid transparent" : "1px solid #3b3b3b"
-            }`,
           }}
         >
           {NAV_OPTIONS.map((value) => {
@@ -56,8 +51,8 @@ export default function Navbar() {
           })}
         </ul>
 
-        {/* CONTACT US */}
-        <button className={styles.contact}>Contact Us</button>
+        {/* AUTHENTICATION */}
+        <button className={styles.contact}>Authentication</button>
 
         {/* RESPONSIVE OPTIONS */}
         <div className={styles.nav_option}>

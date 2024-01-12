@@ -92,13 +92,9 @@ p {
 }
 
 .default-nav:first-child {
-  bottom: 20%;
-  position: absolute;
-  margin-left: 45%;
+  background: none !important;
 }
 
 .default-nav:last-child {
-  bottom: 20%;
-  position: absolute;
-  margin-right: 45%;
+  background: none !important;
 }

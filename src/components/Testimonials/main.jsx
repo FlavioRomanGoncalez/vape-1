@@ -18,46 +18,15 @@ export default function Testimonials() {
           {TESTIMONIALS.map((fadeImage, index) => (
             <div key={fadeImage.caption} className={styles.container_slide}>
               <div key={index} className={styles.slide}>
-                <p className={styles.desc}>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem
-                  placeat in laborum ipsam totam id aut sunt porro quo maxime.
-                </p>
-                <div className={styles.test}>
-                  <img
-                    alt="image"
-                    src={fadeImage.url}
-                    className={styles.image}
-                  />
-                  <h2 className={styles.test_text}>Name</h2>
+                <div className={styles.content}>
+                  <h3 className={styles.name}>Name</h3>
+                  <p className={styles.desc}>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Autem placeat in laborum ipsam totam id aut sunt porro quo
+                    maxime.
+                  </p>
                 </div>
-              </div>
-              <div key={index} className={styles.slide}>
-                <p className={styles.desc}>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem
-                  placeat in laborum ipsam totam id aut sunt porro quo maxime.
-                </p>
-                <div className={styles.test}>
-                  <img
-                    alt="image"
-                    src={fadeImage.url}
-                    className={styles.image}
-                  />
-                  <h2 className={styles.test_text}>Name</h2>
-                </div>
-              </div>
-              <div key={index} className={styles.slide}>
-                <p className={styles.desc}>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem
-                  placeat in laborum ipsam totam id aut sunt porro quo maxime.
-                </p>
-                <div className={styles.test}>
-                  <img
-                    alt="image"
-                    src={fadeImage.url}
-                    className={styles.image}
-                  />
-                  <h2 className={styles.test_text}>Name</h2>
-                </div>
+                <img alt="image" src={fadeImage.url} className={styles.image} />
               </div>
             </div>
           ))}
