@@ -14,13 +14,13 @@ export function useNav() {
       } else {
         setChange(false);
       }
-      if (offset > prevOffset) {
-        console.log("abajo");
-        setShow(false);
-      } else {
-        console.log("arriba");
-        setShow(true);
-      }
+      // if (offset > prevOffset) {
+      //   console.log("abajo");
+      //   setShow(false);
+      // } else {
+      //   console.log("arriba");
+      //   setShow(true);
+      // }
       setPrevOffset(offset);
     };
 

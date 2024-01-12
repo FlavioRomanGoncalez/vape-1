@@ -22,6 +22,7 @@ export default function Navbar() {
         className={`${styles.container_nav}`}
         style={{
           // opacity: `${show ? "0" : "1"}`,
+
           backgroundColor: `${change ? "#25252550" : "transparent"}`,
         }}
       >
@@ -33,7 +34,13 @@ export default function Navbar() {
         {/* OPTIONS */}
         <ul
           className={styles.nav_lists}
-          style={{ top: `${show ? "0%" : "-200%"}` }}
+          style={{
+            top: `${show ? "0%" : "-200%"}`,
+            transition: "all 1s ease",
+            borderBottom: `${
+              change ? "1px solid transparent" : "1px solid #3b3b3b"
+            }`,
+          }}
         >
           {NAV_OPTIONS.map((value) => {
             return (
