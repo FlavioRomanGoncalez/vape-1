@@ -22,7 +22,7 @@ export default function TopButton() {
     <>
       <animated.a href="#about" style={props} className={styles.container}>
         {/* <div className={styles.dot}></div> */}
-        <a href="#about" className={styles.container_button}>
+        <a href="#home" className={styles.container_button}>
           <FaArrowUp color="#fff" />
         </a>
       </animated.a>

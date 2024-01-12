@@ -7,11 +7,12 @@
   align-items: center;
   border-radius: 100%;
   justify-content: center;
-  background-color: #252525 !important;
+  background-color: #000000 !important;
   margin: 10px auto 0 auto;
   position: fixed;
   right: 1%;
   bottom: 2%;
+  z-index: 100;
 }
 
 .container:hover > .dot {
