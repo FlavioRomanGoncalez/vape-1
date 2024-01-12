@@ -91,6 +91,12 @@
   background-color: #000;
 }
 
+@media (max-width: 1080px) {
+  .item:last-child {
+    display: none;
+  }
+}
+
 @media (max-width: 800px) {
   .form {
     padding: 0 10px;
