@@ -70,7 +70,7 @@
   font-weight: 400;
 }
 
-.nav_list:hover::before {
+/* .nav_list:hover::before {
   content: "";
   position: absolute;
   top: 0;
@@ -83,7 +83,7 @@
   transition: all 0.2s ease;
   border-radius: 100%;
   background-color: #fff;
-}
+} */
 
 .nav_list:hover {
   transform: translateY(-5px);
@@ -129,6 +129,11 @@
   .nav_option {
     z-index: 100;
     display: block;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000;
   }
   .nav_list {
     color: #000;
