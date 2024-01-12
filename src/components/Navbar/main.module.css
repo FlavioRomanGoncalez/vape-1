@@ -64,9 +64,26 @@
   color: #fff;
   cursor: pointer;
   padding: 10px 15px;
+  position: relative;
   font-size: 1rem;
   transition: all 0.2s ease;
   font-weight: 400;
+}
+
+.nav_list:hover::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 6px;
+  margin: auto auto auto 0;
+  bottom: 0;
+  height: 6px;
+  box-shadow: 2px 2px 2px #2c2c2c;
+  transition: all 0.2s ease;
+  border-radius: 100%;
+  background-color: #fff;
 }
 
 .nav_list:hover {
