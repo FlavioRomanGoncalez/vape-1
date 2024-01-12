@@ -27,7 +27,7 @@ export default function Footer() {
         </li>
       </ul>
 
-      <h3 className={styles.title}>
+      <h3 className={styles.copy}>
         Copyright © 2024 LAMBORHINI. All rights reserved.
       </h3>
 
@@ -37,10 +37,10 @@ export default function Footer() {
       </ul>
 
       <p>
-        <strong>WARNING:</strong> This product can expose you to chemicals
-        including formaldehyde, which is known to the State of California to
-        cause cancer, and nicotine, which is known to the State of California to
-        cause birth defects or other reproductive harm.
+        <strong style={{ fontWeight: 500 }}>WARNING:</strong> This product can
+        expose you to chemicals including formaldehyde, which is known to the
+        State of California to cause cancer, and nicotine, which is known to the
+        State of California to cause birth defects or other reproductive harm.
       </p>
     </section>
   );

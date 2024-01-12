@@ -18,10 +18,10 @@ export default function TextFieldComponet({
         type={type}
         label={label}
         value={formik.values[name]}
-        error={formik?.touched[name]}
+        error={formik.touched[name] && !!formik.errors[name]}
         variant={variant}
         className={className}
-        helperText={formik?.touched[name]}
+        helperText={formik.touched[name] && !!formik.errors[name]}
         placeholder={placeholder}
         handleChange={formik.handleChange}
       />

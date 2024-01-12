@@ -30,8 +30,8 @@
 
 .form {
   width: 100%;
-  max-width: 500px;
   display: flex;
+  max-width: 500px;
   align-items: center;
   flex-direction: column;
   justify-content: center;
@@ -45,24 +45,21 @@
   bottom: 0;
   position: absolute;
   max-width: 140px;
-  width: 100%;
   margin: auto;
+  width: 100%;
 }
 
 .vape01,
 .vape02,
 .vape03 {
+  top: 0;
   width: 100%;
+  bottom: 0;
   display: flex;
+  position: absolute;
   max-width: 130px;
   align-items: center;
-  position: absolute;
-  top: 0;
-  bottom: 0;
   justify-content: center;
-  /* animation-name: vape; */
-  animation-duration: 3s;
-  animation-iteration-count: infinite;
   margin: auto;
 }
 
@@ -73,23 +70,11 @@
   right: 200px;
 }
 
-@keyframes vape {
-  0% {
-    transform: translateY(0px) rotateZ(10deg);
-  }
-  50% {
-    transform: translateY(100px) rotateZ(10deg);
-  }
-  100% {
-    transform: translateY(0px) rotateZ(10deg);
-  }
-}
-
 .flex {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: calc(100vh - 80px);
+  height: calc(100vh - 81px);
 }
 
 .item {

@@ -49,9 +49,9 @@ export default function Login() {
           lg={6}
           className={`${styles.content}`}
         >
-          <form onSubmit={formik.handleSubmit} className={`${styles.form}`}>
+          <div className={`${styles.form}`}>
             <h1
-              className={`${styles.title} "animate__animated animate__fadeInDown"`}
+              className={`${styles.title} animate__animated animate__fadeInDown`}
             >
               Login In
             </h1>
@@ -74,12 +74,13 @@ export default function Login() {
               placeholder="Enter your password"
             />
             <button
-              type="submit"
+              type="button"
+              onClick={formik.handleSubmit}
               className={`${styles.btn} animate__animated animate__fadeInUp`}
             >
               Get started
             </button>
-          </form>
+          </div>
         </Grid>
       </Grid>
     </main>

@@ -4,18 +4,20 @@ import styles from "./main.module.css";
 // ICON
 import { FaBars } from "react-icons/fa";
 
-// REACT ROUTER DOM
-import { Link, useLocation } from "react-router-dom";
-
 // LOGO
 import logo from "../../assets/logo.webp";
 
 // CUSTOM HOOK
 import { useNav } from "../../hooks/useNav";
 
+// REACT / HOOKS
+import { useEffect, useState } from "react";
+
 // CONSTANT VALUES
 import { NAV_OPTIONS } from "../../constant/main";
-import { useEffect, useState } from "react";
+
+// REACT ROUTER DOM
+import { Link, useLocation } from "react-router-dom";
 
 export default function Navbar() {
   const location = useLocation();

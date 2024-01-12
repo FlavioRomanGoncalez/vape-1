@@ -6,6 +6,6 @@ export const initialValues = {
 };
 
 export const validationSchema = Yup.object().shape({
-  email: Yup.string().notRequired("Requerido"),
-  password: Yup.string().notRequired("Requerido"),
+  email: Yup.string().required("Requerido"),
+  password: Yup.string().required("Requerido"),
 });
