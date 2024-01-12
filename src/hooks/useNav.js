@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react";
 
 export function useNav() {
+  const [hide, setHide] = useState(false);
   const [show, setShow] = useState(false);
   const [change, setChange] = useState(false);
   const [prevOffset, setPrevOffset] = useState(0);
@@ -14,13 +15,13 @@ export function useNav() {
       } else {
         setChange(false);
       }
-      // if (offset > prevOffset) {
-      //   console.log("abajo");
-      //   setShow(false);
-      // } else {
-      //   console.log("arriba");
-      //   setShow(true);
-      // }
+      if (offset > prevOffset) {
+        setHide(false);
+        console.log("1");
+      } else {
+        setHide(true);
+        console.log("0");
+      }
       setPrevOffset(offset);
     };
 
@@ -31,5 +32,5 @@ export function useNav() {
     };
   }, [change, prevOffset]);
 
-  return { show, setShow, change, setChange };
+  return { show, setShow, change, setChange, setHide, hide };
 }

@@ -21,10 +21,12 @@ import { Link, useLocation } from "react-router-dom";
 
 export default function Navbar() {
   const location = useLocation();
+
   const [pathname, setPathname] = useState();
-  const { show, setShow, change } = useNav();
+  const { show, setShow, hide, setHide } = useNav();
 
   useEffect(() => {
+    setHide(true);
     setPathname(location.pathname);
   }, []);
 
@@ -33,7 +35,8 @@ export default function Navbar() {
       <nav
         className={`${styles.container_nav}`}
         style={{
-          // backgroundColor: `${change ? "#25252550" : "transparent"}`,
+          opacity: `${hide ? 1 : 0}`,
+          transition: "all 0.2 ease",
           backgroundColor: `${
             pathname === "/authentication" ? "#000" : "#25252550"
           }`,
