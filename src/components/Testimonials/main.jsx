@@ -1,10 +1,10 @@
-// // STYLE
-import styles from "./main.module.css";
-
 // SWIPER STYLES
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+
+// STYLE
+import styles from "./main.module.css";
 
 // IMAGES
 import img01 from "../../assets/img01.webp";

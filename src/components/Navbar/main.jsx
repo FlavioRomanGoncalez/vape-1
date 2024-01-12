@@ -4,6 +4,9 @@ import styles from "./main.module.css";
 // ICON
 import { FaBars } from "react-icons/fa";
 
+// REACT ROUTER DOM
+import { Link, useLocation } from "react-router-dom";
+
 // LOGO
 import logo from "../../assets/logo.webp";
 
@@ -12,16 +15,26 @@ import { useNav } from "../../hooks/useNav";
 
 // CONSTANT VALUES
 import { NAV_OPTIONS } from "../../constant/main";
+import { useEffect, useState } from "react";
 
 export default function Navbar() {
+  const location = useLocation();
+  const [pathname, setPathname] = useState();
   const { show, setShow, change } = useNav();
+
+  useEffect(() => {
+    setPathname(location.pathname);
+  }, []);
 
   return (
     <>
       <nav
         className={`${styles.container_nav}`}
         style={{
-          backgroundColor: `${change ? "#25252550" : "transparent"}`,
+          // backgroundColor: `${change ? "#25252550" : "transparent"}`,
+          backgroundColor: `${
+            pathname === "/authentication" ? "#000" : "#25252550"
+          }`,
         }}
       >
         {/* LOGO */}
@@ -39,20 +52,23 @@ export default function Navbar() {
         >
           {NAV_OPTIONS.map((value) => {
             return (
-              <a
+              <Link
+                to={"/"}
                 key={value?.id}
-                href={value?.href}
+                // href={value?.href}
                 className={styles.nav_list}
                 onClick={() => setShow(false)}
               >
                 {value?.text}
-              </a>
+              </Link>
             );
           })}
         </ul>
 
         {/* AUTHENTICATION */}
-        <button className={styles.contact}>Authentication</button>
+        <Link className={styles.contact} to={"/authentication"}>
+          Authentication
+        </Link>
 
         {/* RESPONSIVE OPTIONS */}
         <div className={styles.nav_option}>

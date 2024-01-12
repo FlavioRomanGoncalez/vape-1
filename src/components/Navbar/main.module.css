@@ -87,9 +87,14 @@
   font-family: "BolsterRegular";
   border-radius: 50px;
   letter-spacing: 1px;
-  background-color: #fff;
   animation-name: contact;
+  background-color: #fff;
   animation-duration: 3.5s;
+  transition: all 0.2s ease;
+}
+
+.contact:hover {
+  transform: translateY(-2px);
 }
 
 @keyframes contact {
