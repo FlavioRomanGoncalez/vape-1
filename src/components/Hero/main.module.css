@@ -181,13 +181,12 @@
 .btn::after {
   top: 0;
   left: 103%;
-  width: 0px;
   height: 1px;
   bottom: 0;
   margin: auto 0;
   position: absolute;
+  transition: all 0.2s ease !important;
   background-color: #fff;
-  transition: all 0.2s ease;
   animation-name: btnAfter;
   animation-duration: 2s;
   animation-delay: 2.5s;
@@ -204,14 +203,9 @@
   }
 }
 
-.btn:hover::after {
-  width: 0px;
-}
-
 .btn::before {
   top: 0;
   right: 103%;
-  width: 0px;
   height: 1px;
   bottom: 0;
   margin: auto 0;
@@ -232,10 +226,6 @@
   from {
     width: 0px;
   }
-}
-
-.btn:hover::before {
-  width: 0px;
 }
 
 @media (max-width: 1000px) {
