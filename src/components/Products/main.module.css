@@ -57,7 +57,7 @@
 
 .image {
   width: 100%;
-  max-width: 230px;
+  max-width: 200px;
   transform: rotateZ(18deg);
   transition: all 0.5s ease;
   filter: drop-shadow(5px 5px 5px rgba(65, 65, 65, 0.6));
@@ -92,10 +92,6 @@
   text-align: center;
   font-weight: 500;
   letter-spacing: 1px;
-}
-
-.black_ice {
-  background-color: #292927 !important;
 }
 
 @media (max-width: 1280px) {
