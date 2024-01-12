@@ -49,13 +49,13 @@
   to {
     width: 740px;
     overflow: auto;
-    border-bottom: 1px solid #3b3b3b;
+    /* border-bottom: 1px solid #3b3b3b; */
     /* transform: translateY(0px); */
   }
   from {
     width: 0px;
     overflow: auto;
-    border-bottom: 1px solid #3b3b3b;
+    /* border-bottom: 1px solid #3b3b3b; */
     /* transform: translateY(-2000px); */
   }
 }

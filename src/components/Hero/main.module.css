@@ -165,7 +165,7 @@
 
 .btn {
   background-color: #fff;
-  padding: 18px 0px;
+  padding: 15px 0px;
   width: 100%;
   max-width: 150px;
   border-radius: 50px;
@@ -174,7 +174,68 @@
   margin: auto;
   display: flex;
   justify-content: center;
+  position: relative;
   z-index: 100;
+}
+
+.btn::after {
+  top: 0;
+  left: 103%;
+  width: 0px;
+  height: 1px;
+  bottom: 0;
+  margin: auto 0;
+  position: absolute;
+  background-color: #fff;
+  transition: all 0.2s ease;
+  animation-name: btnAfter;
+  animation-duration: 2s;
+  animation-delay: 2.5s;
+  animation-fill-mode: forwards;
+  content: "";
+}
+
+@keyframes btnAfter {
+  to {
+    width: 100px;
+  }
+  from {
+    width: 0px;
+  }
+}
+
+.btn:hover::after {
+  width: 0px;
+}
+
+.btn::before {
+  top: 0;
+  right: 103%;
+  width: 0px;
+  height: 1px;
+  bottom: 0;
+  margin: auto 0;
+  position: absolute;
+  background-color: #fff;
+  transition: all 0.2s ease;
+  animation-name: btnBefore;
+  animation-duration: 2s;
+  animation-delay: 2.5s;
+  animation-fill-mode: forwards;
+  content: "";
+}
+
+@keyframes btnBefore {
+  to {
+    width: 100px;
+  }
+  from {
+    width: 0px;
+  }
+}
+
+.btn:hover::before {
+  width: 0px;
 }
 
 @media (max-width: 1000px) {

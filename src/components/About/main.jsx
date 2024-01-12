@@ -1,10 +1,8 @@
 // STYLES
 import styles from "./main.module.css";
 
-// VIDEO
-// import vid01 from "../../assets/video.mp4";
-
 // IMAGE
+import logo from "../../assets/lamborghini_text_logo.png";
 import img01 from "../../assets/test.webp";
 
 // REACT ICONS
@@ -18,11 +16,6 @@ export default function About() {
 
   return (
     <section id="about" className={styles.container}>
-      {/* VIDEO */}
-      {/* <video className={styles.video} autoPlay loop muted>
-        <source src={vid01} type="video/mp4" />
-      </video> */}
-
       <Parallax className={styles.parallax} pages={4}>
         {/* PARALLAX 1 */}
         <ParallaxLayer
@@ -39,8 +32,9 @@ export default function About() {
           style={{ ...alignCenter, justifyContent: "center" }}
         >
           <div className={`${styles.card} ${styles.sticky}`}>
-            <img src={img01} className={styles.image} />
+            <img src={img01} className={styles.image} alt="vape" />
             <ArrowButton href={"#products"} />
+            <img src={logo} alt="logo" className={styles.logo} />
           </div>
         </ParallaxLayer>
 
