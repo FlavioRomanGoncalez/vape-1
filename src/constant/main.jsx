@@ -1,3 +1,10 @@
+import ice_mint from "../assets/vapes/ice_mint.webp";
+import black_ice from "../assets/vapes/black_ice.webp";
+import perch_ice from "../assets/vapes/perch_ice.webp";
+import strawberry from "../assets/vapes/strawberry.webp";
+import blueberry_ice from "../assets/vapes/blueberry_ice.webp";
+import strawberry_banana from "../assets/vapes/strawberry_banana.webp";
+
 export const NAV_OPTIONS = [
   { id: 1, href: "#home", text: "HOME", url: "" },
   { id: 2, href: "#about", text: "ABOUT", url: "" },
@@ -14,6 +21,7 @@ export const PRODUCTS = [
     bgColor: "#292927",
     textColor: "#fff",
     className: "black_ice",
+    img: black_ice,
   },
   {
     id: "02",
@@ -21,6 +29,7 @@ export const PRODUCTS = [
     bgColor: "#9af96d",
     textColor: "#fff",
     className: "ice_mint",
+    img: ice_mint,
   },
   {
     id: "03",
@@ -28,6 +37,7 @@ export const PRODUCTS = [
     bgColor: "#017ef4",
     textColor: "#fff",
     className: "blueberry",
+    img: blueberry_ice,
   },
   {
     id: "04",
@@ -35,6 +45,7 @@ export const PRODUCTS = [
     bgColor: "#d40000",
     textColor: "#fff",
     className: "starwberry_watermelon",
+    img: strawberry,
   },
   {
     id: "05",
@@ -42,6 +53,7 @@ export const PRODUCTS = [
     bgColor: "#f2f427",
     textColor: "#fff",
     className: "starwberry",
+    img: strawberry_banana,
   },
   {
     id: "06",
@@ -49,5 +61,6 @@ export const PRODUCTS = [
     bgColor: "#fba400",
     textColor: "#fff",
     className: "peach_ice",
+    img: perch_ice,
   },
 ];

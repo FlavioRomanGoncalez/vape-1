@@ -5,13 +5,11 @@ import styles from "./main.module.css";
 import { PRODUCTS } from "../../constant/main";
 
 // IMAGES
-import test from "../../assets/test.webp";
 import logo from "../../assets/lamborghini_text_logo_white.png";
-// import vape01 from "../../assets/vapes/vape_amarillo.webp";
 
 export default function Products() {
   return (
-    <>
+    <div>
       <main id="products" className={`${styles.container}`}>
         <div className={styles.container_card}>
           {PRODUCTS.map((value) => {
@@ -33,13 +31,13 @@ export default function Products() {
                 >
                   {value.name}
                 </h4>
-                <img className={styles.image} src={test} alt="vape" />
+                <img className={styles.image} src={value.img} alt="vape" />
                 <img className={styles.logo} src={logo} alt="logo" />
               </div>
             );
           })}
         </div>
       </main>
-    </>
+    </div>
   );
 }

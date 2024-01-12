@@ -3,7 +3,7 @@ import styles from "./main.module.css";
 
 // IMAGE
 import logo from "../../assets/lamborghini_text_logo.png";
-import img01 from "../../assets/test.webp";
+import img01 from "../../assets/vapes/pina_colada.webp";
 
 // REACT ICONS
 import ArrowButton from "../ArrowButton/main";
