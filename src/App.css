@@ -90,3 +90,15 @@ p {
   animation: fadeInUp;
   animation-duration: 1s;
 }
+
+.default-nav:first-child {
+  bottom: 20%;
+  position: absolute;
+  margin-left: 45%;
+}
+
+.default-nav:last-child {
+  bottom: 20%;
+  position: absolute;
+  margin-right: 45%;
+}

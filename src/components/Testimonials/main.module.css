@@ -3,26 +3,53 @@
 }
 
 .image {
-  width: 300px;
-  height: 300px;
+  width: 80px;
+  height: 80px;
   object-fit: cover;
-  border-radius: 20px;
-  margin-right: 20px;
   transition: all 0.2s ease;
+  margin-right: 20px;
+  border-radius: 20px;
   border-radius: 100%;
+  border: 3px solid #ddd;
 }
 
 .title {
+  width: 100%;
   font-size: 3rem;
   text-align: center;
+  font-weight: 500;
 }
 
-.content {
+.container_slide {
   height: 100vh;
   display: flex;
+  padding: 0 40px;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.slide {
+  width: 450px;
+  height: 300px;
+  display: flex;
+  padding: 0 20px;
+  position: relative;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  transition: all 0.2s ease;
+  border: 1px solid #ddd;
+  box-shadow: 2.1px 3.1px 2.7px rgba(0, 0, 0, 0.022),
+    5.2px 7.9px 6.9px rgba(0, 0, 0, 0.031),
+    10.6px 16.1px 14.2px rgba(0, 0, 0, 0.039),
+    21.9px 33.2px 29.2px rgba(0, 0, 0, 0.049),
+    60px 91px 80px rgba(0, 0, 0, 0.07);
+}
+
+.slide:hover {
+  transform: translateY(-20px);
 }
 
 .subtitle {
@@ -37,8 +64,24 @@
   max-width: 600px;
   font-size: 1.2rem;
   font-weight: 400;
-  text-align: center;
+  text-align: justify;
   margin-left: 0px;
   letter-spacing: 2px;
   transition: all 0.2s ease;
+  position: absolute;
+  padding: 0 20px;
+  top: 50px;
+}
+
+.test {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+}
+
+.test_text {
+  font-size: 1.2rem;
+  font-weight: 500;
 }

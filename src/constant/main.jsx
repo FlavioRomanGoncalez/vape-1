@@ -1,3 +1,9 @@
+// PHOTOS
+import img01 from "../assets/img01.webp";
+import img02 from "../assets/img02.webp";
+import img03 from "../assets/img03.webp";
+
+// VAPES
 import ice_mint from "../assets/vapes/ice_mint.webp";
 import black_ice from "../assets/vapes/black_ice.webp";
 import perch_ice from "../assets/vapes/perch_ice.webp";
@@ -62,5 +68,20 @@ export const PRODUCTS = [
     textColor: "#fff",
     className: "peach_ice",
     img: perch_ice,
+  },
+];
+
+export const TESTIMONIALS = [
+  {
+    url: img01,
+    caption: "Slide 1",
+  },
+  {
+    url: img02,
+    caption: "Slide 2",
+  },
+  {
+    url: img03,
+    caption: "Slide 3",
   },
 ];
