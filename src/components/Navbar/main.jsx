@@ -1,11 +1,12 @@
 // STYLE
 import styles from "./main.module.css";
 
-// ICON
-import { FaBars } from "react-icons/fa";
-
 // LOGO
 import logo from "../../assets/logo.webp";
+
+// ICON
+import { FaBars } from "react-icons/fa";
+import { IoMdApps } from "react-icons/io";
 
 // CUSTOM HOOK
 import { useNav } from "../../hooks/useNav";
@@ -31,60 +32,63 @@ export default function Navbar() {
   }, []);
 
   return (
-    <>
-      <nav
-        className={`${styles.container_nav}`}
+    <nav
+      className={`${styles.container_nav}`}
+      style={{
+        opacity: `${hide ? 1 : 0}`,
+        transition: "all 0.2 ease",
+        backgroundColor: `${
+          pathname === "/menu" || pathname === "/authentication"
+            ? "#000"
+            : "transparent"
+        }`,
+      }}
+    >
+      {/* LOGO */}
+      <Link to="/" className={styles.container_logo}>
+        <img src={logo} alt="logo" className={styles.logo} />
+      </Link>
+
+      {/* OPTIONS */}
+      <ul
+        className={styles.nav_lists}
         style={{
-          opacity: `${hide ? 1 : 0}`,
-          transition: "all 0.2 ease",
-          backgroundColor: `${
-            pathname === "/authentication" ? "#000" : "#25252550"
-          }`,
+          top: `${show ? "0%" : "-200%"}`,
+          transition: "all 1s ease",
         }}
       >
-        {/* LOGO */}
-        <a href="#home" className={styles.container_logo}>
-          <img src={logo} alt="logo" className={styles.logo} />
-        </a>
-
-        {/* OPTIONS */}
-        <ul
-          className={styles.nav_lists}
-          style={{
-            top: `${show ? "0%" : "-200%"}`,
-            transition: "all 1s ease",
-          }}
-        >
-          {NAV_OPTIONS.map((value) => {
-            return (
-              <Link
-                to={"/"}
-                key={value?.id}
-                // href={value?.href}
-                className={styles.nav_list}
-                onClick={() => setShow(false)}
-              >
-                {value?.text}
-              </Link>
-            );
-          })}
-        </ul>
-
+        {NAV_OPTIONS.map((value) => {
+          return (
+            <a
+              key={value?.id}
+              href={value?.href}
+              className={styles.nav_list}
+              onClick={() => setShow(false)}
+            >
+              {value?.text}
+            </a>
+          );
+        })}
         {/* AUTHENTICATION */}
-        <Link className={styles.contact} to={"/authentication"}>
-          Authentication
-        </Link>
-
-        {/* RESPONSIVE OPTIONS */}
-        <div className={styles.nav_option}>
-          <img src={"../../assets/img01.webp"} alt="" />
-          <FaBars
-            size={28}
-            color={show ? "#000" : "#fff"}
-            onClick={() => setShow(!show)}
-          />
+        <div className={styles.options}>
+          <Link className={styles.authentication} to={"/authentication"}>
+            Authentication
+          </Link>
+          <Link to={"/menu"}>
+            <IoMdApps className={styles.menu} />
+          </Link>
         </div>
-      </nav>
-    </>
+      </ul>
+
+      {/* RESPONSIVE OPTIONS */}
+      <div className={styles.nav_option}>
+        <img src={"../../assets/img01.webp"} alt="" />
+        <FaBars
+          size={28}
+          color={show ? "#fff" : "#fff"}
+          onClick={() => setShow(!show)}
+        />
+      </div>
+    </nav>
   );
 }

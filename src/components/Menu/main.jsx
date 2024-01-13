@@ -6,22 +6,26 @@ import { Link } from "react-router-dom";
 
 // IMAGE
 import logo from "../../assets/lamborghini_text_logo.png";
+import Navbar from "../Navbar/main";
 
 export default function Menu() {
   return (
-    <main className={styles.container}>
-      <ul className={styles.menu}>
-        <h1 className={styles.title}>MENU ADMIN</h1>
-        <Link to={"/admin"} className={styles.btn}>
-          <span className={styles.text}>CARGAR CÓDIGO</span>
-        </Link>
-        <Link to={"/"} className={styles.btn}>
-          <span className={styles.text}>VER LISTA</span>
-        </Link>
-      </ul>
-      <footer>
-        <img src={logo} alt="logo" />
-      </footer>
-    </main>
+    <>
+      <Navbar />
+      <section className={styles.container}>
+        <ul className={styles.menu}>
+          <h1 className={styles.title}>MENU ADMIN</h1>
+          <Link to={"/code"} className={styles.btn}>
+            <span className={styles.text}>CARGAR CÓDIGO</span>
+          </Link>
+          <Link to={"/client"} className={styles.btn}>
+            <span className={styles.text}>VER LISTA</span>
+          </Link>
+        </ul>
+        <footer>
+          <img src={logo} alt="logo" />
+        </footer>
+      </section>
+    </>
   );
 }

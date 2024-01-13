@@ -1,3 +1,6 @@
+// REACT/ HOOK
+import { useState } from "react";
+
 // STYLES
 import styles from "./main.module.css";
 
@@ -12,11 +15,12 @@ import ArrowButton from "../ArrowButton/main";
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 
 export default function About() {
+  const [parallaxReset, setParallaxReset] = useState(false);
   const alignCenter = { display: "flex", alignItems: "center" };
 
   return (
-    <section id="about" className={styles.container}>
-      <Parallax className={styles.parallax} pages={4}>
+    <section className={styles.container}>
+      <Parallax id="about" className={styles.parallax} enabled={true} pages={4}>
         {/* PARALLAX 1 */}
         <ParallaxLayer
           offset={0}

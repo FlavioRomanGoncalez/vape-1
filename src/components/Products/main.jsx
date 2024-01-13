@@ -9,7 +9,7 @@ import logo from "../../assets/lamborghini_text_logo_white.png";
 
 export default function Products() {
   return (
-    <div>
+    <>
       <main id="products" className={`${styles.container}`}>
         <div className={styles.container_card}>
           {PRODUCTS.map((value) => {
@@ -38,6 +38,6 @@ export default function Products() {
           })}
         </div>
       </main>
-    </div>
+    </>
   );
 }

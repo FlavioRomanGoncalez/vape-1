@@ -12,7 +12,7 @@ import blueberry_ice from "../assets/vapes/blueberry_ice.webp";
 import strawberry_banana from "../assets/vapes/strawberry_banana.webp";
 
 export const NAV_OPTIONS = [
-  { id: 1, href: "#home", text: "HOME", url: "" },
+  { id: 1, href: "#home", text: "HOME", url: "/" },
   { id: 2, href: "#about", text: "ABOUT", url: "" },
   { id: 3, href: "#products", text: "PRODUCTS", url: "" },
   { id: 4, href: "#testimonials", text: "TESTIMONIALS", url: "" },
