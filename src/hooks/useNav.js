@@ -12,22 +12,21 @@ export function useNav() {
   const location = useLocation();
 
   useEffect(() => {
-    if (location.pathname === "/menu") {
-      setList(true);
-    }
-    if (location.pathname === "/authentication") {
-      setList(true);
-    }
-    if (location.pathname === "/code") {
-      setList(true);
-    }
-    if (location.pathname === "/client") {
-      setList(true);
-    }
+    // if (location.pathname === "/menu") {
+    //   setList(true);
+    // }
+    // if (location.pathname === "/authentication") {
+    //   setList(true);
+    // }
+    // if (location.pathname === "/code") {
+    //   setList(true);
+    // }
+    // if (location.pathname === "/client") {
+    //   setList(true);
+    // }
 
     const handleScroll = () => {
       const offset = window.scrollY;
-      console.log(offset);
       if (offset > 50) {
         setChange(true);
       } else {
@@ -48,5 +47,13 @@ export function useNav() {
     };
   }, [change, prevOffset]);
 
-  return { show, setShow, change, setChange, setHide, hide, list };
+  return {
+    show,
+    setShow,
+    change,
+    setChange,
+    setHide,
+    hide,
+    list,
+  };
 }

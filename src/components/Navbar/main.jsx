@@ -35,7 +35,7 @@ export default function Navbar() {
     <nav
       className={`${styles.container_nav}`}
       style={{
-        opacity: `${hide ? 1 : 0}`,
+        opacity: `${hide ? 1 : 0.3}`,
         transition: "all 0.2 ease",
         backgroundColor: `${
           pathname === "/menu" || pathname === "/authentication"

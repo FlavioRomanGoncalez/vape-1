@@ -12,6 +12,10 @@
   z-index: 100;
 }
 
+.container_nav:hover {
+  opacity: 1 !important;
+}
+
 @keyframes containerNav {
   to {
     height: 80px;

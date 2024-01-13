@@ -24,14 +24,14 @@
   width: 100%;
 }
 
-.parallax {
+/* .parallax {
   z-index: 100 !important;
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-}
+} */
 
 .title {
   color: #000;
@@ -52,8 +52,6 @@
   max-width: 100%;
   font-size: 3rem;
   font-weight: 500;
-  /* text-align: right; */
-  /* margin-left: auto; */
 }
 
 .conatiner_items {
